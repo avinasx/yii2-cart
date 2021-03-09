@@ -61,7 +61,8 @@ return [
 class ProductModel extends ActiveRecord implements CartItemInterface
 {
 
-    public function getPrice()
+//requires php >= 7, declare version in composer.json
+    public function getPrice() : int
     {
         return $this->price;
     }
